@@ -1,5 +1,13 @@
 <?php 
 final class MySQLiNewsManager extends NewsManager {
+	private $_db;
+	/**
+	 * Constructor of the class.
+	 * @param MySQLi $db A MySQLi object.
+	 */
+	public function __construct(MySQLi $db) {
+		$this->_db = $db;
+	}
 	/**
 	 * Add a News object into the database.
 	 * @param News $news

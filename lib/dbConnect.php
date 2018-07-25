@@ -1,8 +1,9 @@
 <?php
 	// Uncomment the next 2 lines to use PDO
-	DBFactory::load('PDO');
-	DBFactory::MySQLConnectWithPDO();
+	$db = DBFactory::MySQLConnectWithPDO();
+	$manager = new PDONewsManager($db);
 
 	// Uncomment the next 2 lines to use MySQLi
-	// DBFactory::load('MySQLi');
-	// DBFactory::MySQLConnectWithMySQLi();
+	// $db = DBFactory::MySQLConnectWithMySQLi();
+	// $manager = new MySQLiNewsManager.class.php($db);
+	
