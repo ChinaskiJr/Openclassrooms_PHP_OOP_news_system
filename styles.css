@@ -1,0 +1,17 @@
+section {
+	text-align: center;
+	border: 2px black solid;
+	margin: 10px 20% 10px 20%;
+}
+.date {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px 0 20px;
+	font-size: 0.9em;
+}
+form {
+	text-align: center;
+}
+h1 {
+	text-align: center;
+}
