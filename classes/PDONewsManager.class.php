@@ -44,7 +44,8 @@ final class PDONewsManager extends NewsManager {
 	 * @return int
 	 */
 	public function count() {
-
+		$q = $this->_db->prepare('SELECT COUNT(*) FROM news');
+		return $q->fetchColumn();
 	}
 	/**
 	 * Return a News Object from the database.
