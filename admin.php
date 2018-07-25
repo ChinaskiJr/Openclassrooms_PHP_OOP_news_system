@@ -3,17 +3,21 @@ require_once 'lib/errors.php';
 require_once 'lib/autoload.php';
 require_once 'templates/htmlHead.html';
 try {
+	require_once 'lib/dbConnect.php';
 	if (!empty($_POST)) {
+		// Check integrity of the data
 		if (!empty($_POST['author'])) {
 			if (empty($_POST['title']) || empty($_POST['content'])) {
 				throw new InvalidArgumentException('The title of the post nor the content can\'t be empty.');
 			}
+			$news = new News($_POST);
 		} else {
 			throw new InvalidArgumentException('The author must have a name...');		
 		}
 
 	}
 } catch (Exception $e) {
+	// set the 2nd argument on true for developper mode
 	catchException($e, true);
 }
 ?>

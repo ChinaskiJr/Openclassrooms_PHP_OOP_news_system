@@ -1,8 +1,8 @@
 <?php
 require_once 'lib/errors.php';
 require_once 'lib/autoload.php';
-// And now the html
 require_once 'templates/htmlHead.html';
+require_once 'lib/dbConnect.php';
 ?>
 
 <body>

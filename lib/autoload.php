@@ -5,6 +5,6 @@
  * @return void
  */
 function loadClass($class) {
-	require_once $class . '.class.php';
+	require_once 'classes/' . $class . '.class.php';
 }
 spl_autoload_register('loadClass');
