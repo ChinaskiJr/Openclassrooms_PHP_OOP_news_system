@@ -6,6 +6,25 @@ class News {
 	private $_content;
 	private $_dateAdd;
 	private $_dateEdit;
+	/**
+	 * Constructor of the class
+	 * @param array $data
+	 */
+	public function __construct(array $data) {
+		$this->hydrate($data);
+	}
+	/**
+	 * Hydrator of the class
+	 * @param array $data
+	 */
+	public function hydrate(array $data) {
+		foreach($data as $key => $value) {
+			$method = 'set' . ucFirst($key);
+			if (method_exists($this, $method)) {
+				$this->$method($value);
+			}
+		}
+	}
 
 	// Getters
 	public function id() {
@@ -97,7 +116,7 @@ class News {
 	 * @param DateTime $dateAdd The date to set.
 	 * @return void
 	 */
-	public function setDateAdd($dateEdit) {
+	public function setDateEdit($dateEdit) {
 		if (!$dateEdit instanceof DateTime) {
 			throw new InvalidArgumentException('<strong>Invalid Argument</strong> : The News dateEdit must be an instance of DateTime.');
 		}
