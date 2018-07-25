@@ -1,15 +1,12 @@
 <?php
-// All about the errors 
-require_once 'errors.php';
-set_error_handler('error2exception');
+require_once 'lib/errors.php';
+require_once 'lib/autoload.php';
+// And now the html
+require_once 'templates/htmlHead.html';
+?>
 
-/**
- * The autoloader 
- * @param string $class The class to instanciate
- * @return void
- */
-function loadClass($class) {
-	require_once $class . '.class.php';
-}
-spl_autoload_register('loadClass');
-
+<body>
+	<a href="admin.php">Access to the administration page</a>
+	<h1>List of the five last news</h1>
+</body>
+</html>
