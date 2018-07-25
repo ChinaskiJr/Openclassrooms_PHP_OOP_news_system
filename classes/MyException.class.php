@@ -25,4 +25,5 @@ class MyException extends ErrorException {
 		        break;
 		}
 		return 'A <strong>' . $type . '</strong> occured in <strong>' . $this->file . '</strong> on line <strong>' . $this->line . '</strong>: <br />' . $this->message; 
+	}
 }
