@@ -22,5 +22,5 @@ function catchException(Exception $e, $devMode) {
  * @return void
  */
 function error2exception($code, $message, $file, $line) {
-	throw new MyException($message, 0, $code, $fichier, $line);
+	throw new MyException($message, 0, $code, $file, $line);
 }
