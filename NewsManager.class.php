@@ -16,8 +16,20 @@ abstract class NewsManager {
 	 */
 	abstract public function delete($int);
 	/**
-	 * Count the amount of keys in the database
+	 * Count the amount of keys in the database.
 	 * @return int
 	 */
 	abstract public function count();
+	/**
+	 * Return a News Object from the database.
+	 * @param int id The ID of the News in the database.
+	 * @return News
+	 */
+	abstract public function get($id);
+	/**
+	 * Return an array filled with the x last news.
+	 * @param $int The amout of news you want to show.
+	 * @return array
+	 */
+	abstract public function getList($lastNews);
 }
