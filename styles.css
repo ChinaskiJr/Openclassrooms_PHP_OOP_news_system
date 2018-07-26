@@ -1,4 +1,4 @@
-section {
+.news {
 	text-align: center;
 	border: 2px black solid;
 	margin: 10px 20% 10px 20%;
@@ -14,4 +14,19 @@ form {
 }
 h1 {
 	text-align: center;
+}
+.editNews {
+	text-align: center;
+}
+form {
+	text-align: center;
+}
+table {
+	width: 60%;
+	margin:auto;
+ 	text-align: center;
+	border-collapse: collapse;
+}
+table, td {
+	border: 1px solid black;
 }
