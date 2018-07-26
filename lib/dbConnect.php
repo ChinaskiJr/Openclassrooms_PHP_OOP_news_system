@@ -3,7 +3,7 @@
 	$db = DBFactory::MySQLConnectWithPDO();
 	$manager = new PDONewsManager($db);
 
-	// Uncomment the next 2 lines to use MySQLi
+	// Comment the next 2 lines to unuse MySQLi
 	// $db = DBFactory::MySQLConnectWithMySQLi();
-	// $manager = new MySQLiNewsManager.class.php($db);
+	// $manager = new MySQLiNewsManager($db);
 	
